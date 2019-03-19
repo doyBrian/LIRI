@@ -18,6 +18,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 * `do-what-it-says`
 
+
 ### What Each Command Should Do
 
 1. `node liri.js concert-this <artist/band name here>`
@@ -31,6 +32,8 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
 * (screenshots/concert-this screenshot.png)
+
+
 
 2. `node liri.js spotify-this-song '<song name here>'`
 
@@ -51,6 +54,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 * (screenshots/spotify-this-song screenshot.png)
 
 * (screenshots/spotify-this-song without song title.png)
+
 
 
 3. `node liri.js movie-this '<movie name here>'`
@@ -76,6 +80,8 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 * (screenshots/movie-this without movie title.png)
 
+
+
 4. `node liri.js do-what-it-says`
 
 * Using the `fs` Node package, LIRI will take the text inside of random.txt and then use it to call one of LIRI's commands.
@@ -89,6 +95,8 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 * (screenshots/do-what-it-says movie-this.png)
 
 * (screenshots/do-what-it-says spotify-this-song.png)
+
+
 
 ### BONUS FEATURE
 
