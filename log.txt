@@ -1,0 +1,206 @@
+Venue Name: Mollenpark
+Venue Location: Aalborg, Denmark
+Concert Date: 06-01-2019
+
+Venue Name: Lanxess Arena
+Venue Location: Cologne, Germany
+Concert Date: 06-03-2019
+
+Venue Name: O2 ARENA
+Venue Location: Prague, Czech Republic
+Concert Date: 06-05-2019
+
+Venue Name: Tauron Arena
+Venue Location: Kraków, Poland
+Concert Date: 06-06-2019
+
+Venue Name: Ziggo Dome
+Venue Location: Amsterdam, Netherlands
+Concert Date: 06-10-2019
+
+Venue Name: AccorHotels Arena
+Venue Location: Paris, France
+Concert Date: 06-11-2019
+
+Venue Name: Curacao North Sea Jazz Festival
+Venue Location: Curacao, Netherlands Antilles
+Concert Date: 08-31-2019
+
+Song Title: Let It Be - Remastered 2009
+Album Title: Let It Be (Remastered)
+Artist(s) Name: The Beatles
+Preview URL: null
+
+Song Title: Let It Be (live Acoustic)
+Album Title: Live Classix 2007
+Artist(s) Name: Steve Acho
+Preview URL: https://p.scdn.co/mp3-preview/e957b4a6d1ab7af6531471ac08c51ba379b102bc?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Song Title: Let It Be Me (feat. Ava Max)
+Album Title: 7
+Artist(s) Name: David Guetta
+Preview URL: https://p.scdn.co/mp3-preview/a821cf43b8b6d1f674cb3e854fc53f4ea00efe14?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Song Title: Let It Be Mine
+Album Title: Ticket To L.A.
+Artist(s) Name: Brett Young
+Preview URL: null
+
+Song Title: Across The Universe - Remastered 2009
+Album Title: Let It Be (Remastered)
+Artist(s) Name: The Beatles
+Preview URL: null
+
+Song Title: The Sign
+Album Title: The Sign (US Album) [Remastered]
+Artist(s) Name: Ace of Base
+Preview URL: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Title: The Lion King
+Year Released: 1994
+Actors: Rowan Atkinson, Matthew Broderick, Niketa Calame-Harris, Jim Cummings
+Plot: A Lion cub crown prince is tricked by a treacherous uncle into thinking he caused his father's death and flees into exile in despair, only to learn in adulthood his identity and his responsibilities.
+Country: USA
+Language: English, Swahili, Xhosa, Zulu
+IMDB Rating: 8.5/10
+Rotten Tomatoes Rating: 93%
+
+You did not enter a movie title. Here is a recommendation:
+Title: Mr. Nobody
+Year Released: 2009
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+IMDB Rating: 7.8/10
+Rotten Tomatoes Rating: 67%
+
+If you have not watched "Mr. Nobody", then you should: http://www.imdb.com/title/tt0485947/
+It's on Netflix!
+
+Title: Captain America: The First Avenger
+Year Released: 2011
+Actors: Chris Evans, Hayley Atwell, Sebastian Stan, Tommy Lee Jones
+Plot: Steve Rogers, a rejected military soldier transforms into Captain America after taking a dose of a "Super-Soldier serum". But being Captain America comes at a price as he attempts to take down a war monger and a terrorist organization.
+Country: USA
+Language: English, Norwegian, French
+IMDB Rating: 6.9/10
+Rotten Tomatoes Rating: 80%
+
+Song Title: I Want It That Way
+Album Title: The Hits--Chapter One
+Artist(s) Name: Backstreet Boys
+Preview URL: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Song Title: I Want It That Way
+Album Title: Millennium
+Artist(s) Name: Backstreet Boys
+Preview URL: https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Song Title: I Want It That Way
+Album Title: Covers Part IV
+Artist(s) Name: Anthem Lights
+Preview URL: https://p.scdn.co/mp3-preview/4a163fbfa2dbbe4433f277e0e7395dca656364f5?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Song Title: I Want It That Way
+Album Title: Beautiful Dreams
+Artist(s) Name: Tyler and Mark
+Preview URL: https://p.scdn.co/mp3-preview/99c791194bbd4e5f315ca8964babf0b69bc520b3?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Song Title: Ebay (Parody of "I Want It That Way" by the Backstreet Boys)
+Album Title: Poodle Hat
+Artist(s) Name: "Weird Al" Yankovic
+Preview URL: https://p.scdn.co/mp3-preview/e217ea111ab84a777f204252fce4b18d5de3ae80?cid=30c72eccf25c4eeeba1d354f1ae343d5
+
+Title: Beauty and the Beast
+Year Released: 1991
+Actors: Robby Benson, Jesse Corti, Rex Everhart, Angela Lansbury
+Plot: A selfish prince is cursed to become a monster for the rest of his life, unless he learns to fall in love with a beautiful young woman he keeps prisoner.
+Country: USA
+Language: English, French
+IMDB Rating: 8.0/10
+Rotten Tomatoes Rating: 94%
+
+Venue Name: Showbox SoDo
+Venue Location: Seattle, United States
+Concert Date: 03-19-2019
+
+Venue Name: Crystal Ballroom
+Venue Location: Portland, United States
+Concert Date: 03-20-2019
+
+Venue Name: Ace of Spades
+Venue Location: Sacramento, United States
+Concert Date: 03-22-2019
+
+Venue Name: Wiltern
+Venue Location: Los Angeles, United States
+Concert Date: 03-23-2019
+
+Venue Name: House of Blues
+Venue Location: Las Vegas, United States
+Concert Date: 03-24-2019
+
+Venue Name: BottleRock Napa Valley
+Venue Location: Napa, United States
+Concert Date: 05-25-2019
+
+Venue Name: 10th Annual California Roots Music and Arts Festival
+Venue Location: Monterey, United States
+Concert Date: 05-26-2019
+
+Venue Name: Zeltfestival Rhein-Neckar
+Venue Location: Mannheim, Germany
+Concert Date: 06-19-2019
+
+Venue Name: Release Athens Festival
+Venue Location: Athens, Greece
+Concert Date: 06-21-2019
+
+Venue Name: Fix Factory of Sound Open Air
+Venue Location: Thessaloniki, Greece
+Concert Date: 06-22-2019
+
+Venue Name: VOLT
+Venue Location: Sopron, Hungary
+Concert Date: 06-26-2019
+
+Venue Name: Provinssi
+Venue Location: Seinäjoki, Finland
+Concert Date: 06-28-2019
+
+Venue Name: Parkpop
+Venue Location: Den Haag, Netherlands
+Concert Date: 06-29-2019
+
+Venue Name: A2 Club
+Venue Location: St Petersburg, Russia
+Concert Date: 07-02-2019
+
+Venue Name: Adrenaline Stadium
+Venue Location: Moscow, Russia
+Concert Date: 07-03-2019
+
+Venue Name: Citadelle D'arras
+Venue Location: Arras-en-lavedan, France
+Concert Date: 07-05-2019
+
+Venue Name: Roskilde Festival
+Venue Location: Roskilde, Denmark
+Concert Date: 07-06-2019
+
+Venue Name: Summerjam
+Venue Location: Cologne, Germany
+Concert Date: 07-07-2019
+
+Venue Name: Rockhal
+Venue Location: Esch-sur-alzette, Luxembourg
+Concert Date: 07-09-2019
+
+Venue Name: Lovebox Festival
+Venue Location: London, United Kingdom
+Concert Date: 07-12-2019
+
+Venue Name: NASS Festival
+Venue Location: Bristol, United Kingdom
+Concert Date: 07-14-2019
