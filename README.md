@@ -31,9 +31,11 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 * Date of the Event (use moment to format this as "MM/DD/YYYY")
 
-* (screenshots/concert-this screenshot.png)
+<br>
 
+* <img src="screenshots/concert-this screenshot.png">
 
+<br>
 
 2. `node liri.js spotify-this-song '<song name here>'`
 
@@ -51,11 +53,15 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 * It will utilize the [node-spotify-api](https://www.npmjs.com/package/node-spotify-api) package in order to retrieve song information from the Spotify API.
 
-* (screenshots/spotify-this-song screenshot.png)
+<br>
 
-* (screenshots/spotify-this-song without song title.png)
+<img src="screenshots/spotify-this-song screenshot.png">
 
+<br>
 
+<img src="screenshots/spotify-this-song without song title.png">
+
+<br>
 
 3. `node liri.js movie-this '<movie name here>'`
 
@@ -76,11 +82,15 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 * It'll use the `axios` package to retrieve data from the OMDB API. 
 
-* (screenshots/movie-this screenshot.png)
+<br>
 
-* (screenshots/movie-this without movie title.png)
+<img src="screenshots/movie-this screenshot.png">
 
+<br>
 
+<img src="screenshots/movie-this without movie title.png">
+
+<br>
 
 4. `node liri.js do-what-it-says`
 
@@ -90,13 +100,19 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 * The file random.txt can be edited to test out the feature for movie-this and concert-this.
 
-* (screenshots/do-what-it-says concert-this.png)
+<br>
 
-* (screenshots/do-what-it-says movie-this.png)
+<img src="screenshots/do-what-it-says concert-this.png">
 
-* (screenshots/do-what-it-says spotify-this-song.png)
+<br>
 
+<img src="screenshots/do-what-it-says movie-this.png">
 
+<br>
+
+<img src="screenshots/do-what-it-says spotify-this-song.png">
+
+<br>
 
 ### BONUS FEATURE
 
