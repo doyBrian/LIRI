@@ -61,13 +61,17 @@ function concert_info() {
         function(response) {
           
           for (let i = 0; i < response.data.length; i++) {
-            console.log("\nVenue Name: " + response.data[i].venue.name);
-            fs.appendFileSync('log.txt', "\nVenue Name: " + response.data[i].venue.name, 'utf8');
-            console.log("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country);
-            fs.appendFileSync('log.txt', "\nVenue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country, 'utf8');
+            
             concert_date = moment(response.data[i].datetime).format("MM-DD-YYYY");
-            console.log("Concert Date: " + concert_date + '\n');
-            fs.appendFileSync('log.txt', "\nConcert Date: " + concert_date + '\n', 'utf8');
+            var concert_info = ["\nVenue Name: " + response.data[i].venue.name,
+                              "Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country,
+                              "Concert Date: " + concert_date + '\n'].join('\n');
+            
+            fs.appendFile("log.txt", concert_info, function(err) {
+              if (err) throw err;
+              console.log(concert_info);
+            });
+
           }
         }
       );
@@ -88,14 +92,16 @@ function song_info() {
             }
 
             for (let j = 0; j < data.tracks.items.length; j++) {
-                console.log("\nSong Title: " + data.tracks.items[j].name);
-                fs.appendFileSync('log.txt', "\nSong Title: " + data.tracks.items[j].name, 'utf8'); 
-                console.log("Album Title: " + data.tracks.items[j].album.name);
-                fs.appendFileSync('log.txt', "\nAlbum Title: " + data.tracks.items[j].album.name, 'utf8');
-                console.log("Artist(s) Name: " + data.tracks.items[j].artists[0].name);
-                fs.appendFileSync('log.txt', "\nArtist(s) Name: " + data.tracks.items[j].artists[0].name, 'utf8');
-                console.log("Preview URL: " + data.tracks.items[j].preview_url + '\n');
-                fs.appendFileSync('log.txt', "\nPreview URL: " + data.tracks.items[j].preview_url + '\n', 'utf8');
+
+                var song_info = ["\nSong Title: " + data.tracks.items[j].name,
+                                "Album Title: " + data.tracks.items[j].album.name,
+                                "Artist(s) Name: " + data.tracks.items[j].artists[0].name,
+                                "Preview URL: " + data.tracks.items[j].preview_url + '\n'].join('\n');
+
+                fs.appendFile("log.txt", song_info, function(err) {
+                  if (err) throw err;
+                  console.log(song_info);
+                });
             }
         });
     } else { //if no song entered, default to The Sign by Ace of Base
@@ -105,18 +111,18 @@ function song_info() {
             return console.log('Error occurred: ' + err);
             }
 
-            console.log("\nYou did not enter a song title. Here is a recommendation:");
-
             for (let j = 0; j < data.tracks.items.length; j++) {
                 if (data.tracks.items[j].artists[0].name === "Ace of Base") {
-                console.log("\nSong Title: " + data.tracks.items[j].name);
-                fs.appendFileSync('log.txt', "\nSong Title: " + data.tracks.items[j].name, 'utf8'); 
-                console.log("Album Title: " + data.tracks.items[j].album.name);
-                fs.appendFileSync('log.txt', "\nAlbum Title: " + data.tracks.items[j].album.name, 'utf8');
-                console.log("Artist(s) Name: " + data.tracks.items[j].artists[0].name);
-                fs.appendFileSync('log.txt', "\nArtist(s) Name: " + data.tracks.items[j].artists[0].name, 'utf8');
-                console.log("Preview URL: " + data.tracks.items[j].preview_url + '\n');
-                fs.appendFileSync('log.txt', "\nPreview URL: " + data.tracks.items[j].preview_url + '\n', 'utf8');
+                  var song_info = ["\nYou did not enter a song title. Here is a recommendation:",
+                                  "\nSong Title: " + data.tracks.items[j].name,
+                                  "Album Title: " + data.tracks.items[j].album.name,
+                                  "Artist(s) Name: " + data.tracks.items[j].artists[0].name,
+                                  "Preview URL: " + data.tracks.items[j].preview_url + '\n'].join('\n');
+
+                  fs.appendFile("log.txt", song_info, function(err) {
+                    if (err) throw err;
+                    console.log(song_info);
+                  });
                 }
             }
         });
@@ -146,22 +152,21 @@ function movie_info() {
     
         axios.get(queryUrl).then(
         function(response) {
-          console.log("\nTitle: " + response.data.Title);
-          fs.appendFileSync('log.txt', "\nTitle: " + response.data.Title, 'utf8');
-          console.log("Year Released: " + response.data.Year);
-          fs.appendFileSync('log.txt', "\nYear Released: " + response.data.Year, 'utf8');
-          console.log("Actors: " + response.data.Actors);
-          fs.appendFileSync('log.txt', "\nActors: " + response.data.Actors, 'utf8');
-          console.log("Plot: " + response.data.Plot);
-          fs.appendFileSync('log.txt', "\nPlot: " + response.data.Plot, 'utf8');
-          console.log("Country: " + response.data.Country);
-          fs.appendFileSync('log.txt', "\nCountry: " + response.data.Country, 'utf8');
-          console.log("Language: " + response.data.Language);
-          fs.appendFileSync('log.txt', "\nLanguage: " + response.data.Language, 'utf8');
-          console.log("IMDB Rating: " + response.data.Ratings[0].Value);
-          fs.appendFileSync('log.txt', "\nIMDB Rating: " + response.data.Ratings[0].Value, 'utf8');
-          console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n');
-          fs.appendFileSync('log.txt', "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n', 'utf8');
+
+          var movie_info = ["\nTitle: " + response.data.Title,
+                            "Year Released: " + response.data.Year,
+                            "Actors: " + response.data.Actors,
+                            "Plot: " + response.data.Plot,
+                            "Country: " + response.data.Country,
+                            "Language: " + response.data.Language,
+                            "IMDB Rating: " + response.data.Ratings[0].Value,
+                            "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n'].join('\n');
+
+          fs.appendFile("log.txt", movie_info, function(err) {
+            if (err) throw err;
+            console.log(movie_info);
+          });
+
         }
       );
     } else {   //if no movie title is entered, default to Mr. Nobody
@@ -171,28 +176,24 @@ function movie_info() {
 
         axios.get(queryUrl).then(
         function(response) {
-          console.log("\nYou did not enter a movie title. Here is a recommendation:");
-          fs.appendFileSync('log.txt', "\nYou did not enter a movie title. Here is a recommendation:", 'utf8');
-          console.log("\nTitle: " + response.data.Title);
-          fs.appendFileSync('log.txt', "\nTitle: " + response.data.Title, 'utf8');
-          console.log("Year Released: " + response.data.Year);
-          fs.appendFileSync('log.txt', "\nYear Released: " + response.data.Year, 'utf8');
-          console.log("Actors: " + response.data.Actors);
-          fs.appendFileSync('log.txt', "\nActors: " + response.data.Actors, 'utf8');
-          console.log("Plot: " + response.data.Plot);
-          fs.appendFileSync('log.txt', "\nPlot: " + response.data.Plot, 'utf8');
-          console.log("Country: " + response.data.Country);
-          fs.appendFileSync('log.txt', "\nCountry: " + response.data.Country, 'utf8');
-          console.log("Language: " + response.data.Language);
-          fs.appendFileSync('log.txt', "\nLanguage: " + response.data.Language, 'utf8');
-          console.log("IMDB Rating: " + response.data.Ratings[0].Value);
-          fs.appendFileSync('log.txt', "\nIMDB Rating: " + response.data.Ratings[0].Value, 'utf8');
-          console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n');
-          fs.appendFileSync('log.txt', "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n', 'utf8');
-          console.log('\nIf you have not watched "Mr. Nobody", then you should: http://www.imdb.com/title/' + response.data.imdbID + '/');
-          fs.appendFileSync('log.txt', '\nIf you have not watched "Mr. Nobody", then you should: http://www.imdb.com/title/' + response.data.imdbID + '/', 'utf8');
-          console.log("\nIt's on Netflix!\n");
-          fs.appendFileSync('log.txt', "\nIt's on Netflix!\n", 'utf8');
+          
+          var movie_info = ["\nYou did not enter a movie title. Here is a recommendation:",
+                            "\nTitle: " + response.data.Title,
+                            "Year Released: " + response.data.Year,
+                            "Actors: " + response.data.Actors,
+                            "Plot: " + response.data.Plot,
+                            "Country: " + response.data.Country,
+                            "Language: " + response.data.Language,
+                            "IMDB Rating: " + response.data.Ratings[0].Value,
+                            "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n',
+                            'If you have not watched "Mr. Nobody", then you should: http://www.imdb.com/title/' + response.data.imdbID + '/',
+                            "It's on Netflix!\n"].join('\n');
+
+          fs.appendFile("log.txt", movie_info, function(err) {
+          if (err) throw err;
+          console.log(movie_info);
+          });
+
         }
       );        
     }    
@@ -235,13 +236,15 @@ function random_info() {
               function(response) {
                 
                 for (let i = 0; i < response.data.length; i++) {
-                  console.log("\nVenue Name: " + response.data[i].venue.name);
-                  fs.appendFileSync('log.txt', "\nVenue Name: " + response.data[i].venue.name, 'utf8');
-                  console.log("Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country);
-                  fs.appendFileSync('log.txt', "\nVenue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country, 'utf8');
                   concert_date = moment(response.data[i].datetime).format("MM-DD-YYYY");
-                  console.log("Concert Date: " + concert_date + '\n');
-                  fs.appendFileSync('log.txt', "\nConcert Date: " + concert_date + '\n', 'utf8');
+                  var concert_info = ["\nVenue Name: " + response.data[i].venue.name,
+                                    "Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country,
+                                    "Concert Date: " + concert_date + '\n'].join('\n');
+                  
+                  fs.appendFile("log.txt", concert_info, function(err) {
+                    if (err) throw err;
+                    console.log(concert_info);
+                  });
                 }
               }
             );
@@ -259,14 +262,15 @@ function random_info() {
             return console.log('Error occurred: ' + err);
             }
               for (let j = 0; j < data.tracks.items.length; j++) {
-                  console.log("\nSong Title: " + data.tracks.items[j].name);
-                  fs.appendFileSync('log.txt', "\nSong Title: " + data.tracks.items[j].name, 'utf8'); 
-                  console.log("Album Title: " + data.tracks.items[j].album.name);
-                  fs.appendFileSync('log.txt', "\nAlbum Title: " + data.tracks.items[j].album.name, 'utf8');
-                  console.log("Artist(s) Name: " + data.tracks.items[j].artists[0].name);
-                  fs.appendFileSync('log.txt', "\nArtist(s) Name: " + data.tracks.items[j].artists[0].name, 'utf8');
-                  console.log("Preview URL: " + data.tracks.items[j].preview_url + '\n');
-                  fs.appendFileSync('log.txt', "\nPreview URL: " + data.tracks.items[j].preview_url + '\n', 'utf8');
+                var song_info = ["\nSong Title: " + data.tracks.items[j].name,
+                                "Album Title: " + data.tracks.items[j].album.name,
+                                "Artist(s) Name: " + data.tracks.items[j].artists[0].name,
+                                "Preview URL: " + data.tracks.items[j].preview_url + '\n'].join('\n');
+
+                fs.appendFile("log.txt", song_info, function(err) {
+                  if (err) throw err;
+                  console.log(song_info);
+                });
               }
             });
 
@@ -288,22 +292,21 @@ function random_info() {
           
               axios.get(queryUrl).then(
               function(response) {
-                console.log("\nTitle: " + response.data.Title);
-                fs.appendFileSync('log.txt', "\nTitle: " + response.data.Title, 'utf8');
-                console.log("Year Released: " + response.data.Year);
-                fs.appendFileSync('log.txt', "\nYear Released: " + response.data.Year, 'utf8');
-                console.log("Actors: " + response.data.Actors);
-                fs.appendFileSync('log.txt', "\nActors: " + response.data.Actors, 'utf8');
-                console.log("Plot: " + response.data.Plot);
-                fs.appendFileSync('log.txt', "\nPlot: " + response.data.Plot, 'utf8');
-                console.log("Country: " + response.data.Country);
-                fs.appendFileSync('log.txt', "\nCountry: " + response.data.Country, 'utf8');
-                console.log("Language: " + response.data.Language);
-                fs.appendFileSync('log.txt', "\nLanguage: " + response.data.Language, 'utf8');
-                console.log("IMDB Rating: " + response.data.Ratings[0].Value);
-                fs.appendFileSync('log.txt', "\nIMDB Rating: " + response.data.Ratings[0].Value, 'utf8');
-                console.log("Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n');
-                fs.appendFileSync('log.txt', "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n', 'utf8');
+
+                var movie_info = ["\nTitle: " + response.data.Title,
+                                  "Year Released: " + response.data.Year,
+                                  "Actors: " + response.data.Actors,
+                                  "Plot: " + response.data.Plot,
+                                  "Country: " + response.data.Country,
+                                  "Language: " + response.data.Language,
+                                  "IMDB Rating: " + response.data.Ratings[0].Value,
+                                  "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n'].join('\n');
+
+                fs.appendFile("log.txt", movie_info, function(err) {
+                if (err) throw err;
+                console.log(movie_info);
+                });
+
               }
             );
 
