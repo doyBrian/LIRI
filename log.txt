@@ -183,3 +183,115 @@ Country: USA
 Language: English, French
 IMDB Rating: 8.0/10
 Rotten Tomatoes Rating: 94%
+
+Venue Name: Crystal Ballroom
+Venue Location: Portland, United States
+Concert Date: 03/20/2019
+
+Venue Name: BottleRock Napa Valley
+Venue Location: Napa, United States
+Concert Date: 05/25/2019
+
+Venue Name: 10th Annual California Roots Music and Arts Festival
+Venue Location: Monterey, United States
+Concert Date: 05/26/2019
+
+Venue Name: Zeltfestival Rhein-Neckar
+Venue Location: Mannheim, Germany
+Concert Date: 06/19/2019
+
+Venue Name: Release Athens Festival
+Venue Location: Athens, Greece
+Concert Date: 06/21/2019
+
+Venue Name: Ace of Spades
+Venue Location: Sacramento, United States
+Concert Date: 03/22/2019
+
+Venue Name: Universiada Hall
+Venue Location: Sofia, Bulgaria
+Concert Date: 06/24/2019
+
+Venue Name: VOLT
+Venue Location: Sopron, Hungary
+Concert Date: 06/26/2019
+
+Venue Name: Fix Factory of Sound Open Air
+Venue Location: Thessaloniki, Greece
+Concert Date: 06/22/2019
+
+Venue Name: Parkpop
+Venue Location: Den Haag, Netherlands
+Concert Date: 06/29/2019
+
+Venue Name: A2 Club
+Venue Location: St Petersburg, Russia
+Concert Date: 07/02/2019
+
+Venue Name: Adrenaline Stadium
+Venue Location: Moscow, Russia
+Concert Date: 07/03/2019
+
+Venue Name: Citadelle D'arras
+Venue Location: Arras-en-lavedan, France
+Concert Date: 07/05/2019
+
+Venue Name: Provinssi
+Venue Location: Seinäjoki, Finland
+Concert Date: 06/28/2019
+
+Venue Name: Summerjam
+Venue Location: Cologne, Germany
+Concert Date: 07/07/2019
+
+Venue Name: Rockhal
+Venue Location: Esch-sur-alzette, Luxembourg
+Concert Date: 07/09/2019
+
+Venue Name: Lovebox Festival
+Venue Location: London, United Kingdom
+Concert Date: 07/12/2019
+
+Venue Name: NASS Festival
+Venue Location: Bristol, United Kingdom
+Concert Date: 07/14/2019
+
+Venue Name: House of Blues
+Venue Location: Las Vegas, United States
+Concert Date: 03/24/2019
+
+Venue Name: Roskilde Festival
+Venue Location: Roskilde, Denmark
+Concert Date: 07/06/2019
+
+Venue Name: Wiltern
+Venue Location: Los Angeles, United States
+Concert Date: 03/23/2019
+
+Venue Name: Mollenpark
+Venue Location: Aalborg, Denmark
+Concert Date: 06/01/2019
+
+Venue Name: Lanxess Arena
+Venue Location: Cologne, Germany
+Concert Date: 06/03/2019
+
+Venue Name: O2 ARENA
+Venue Location: Prague, Czech Republic
+Concert Date: 06/05/2019
+
+Venue Name: Tauron Arena
+Venue Location: Kraków, Poland
+Concert Date: 06/06/2019
+
+Venue Name: Ziggo Dome
+Venue Location: Amsterdam, Netherlands
+Concert Date: 06/10/2019
+
+Venue Name: AccorHotels Arena
+Venue Location: Paris, France
+Concert Date: 06/11/2019
+
+Venue Name: Curacao North Sea Jazz Festival
+Venue Location: Curacao, Netherlands Antilles
+Concert Date: 08/31/2019

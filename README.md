@@ -33,7 +33,7 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 <br>
 
-* <img src="screenshots/concert-this screenshot.png">
+* <img src="screenshots/concert-this-screenshot.png">
 
 <br>
 
@@ -55,11 +55,11 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 <br>
 
-<img src="screenshots/spotify-this-song screenshot.png">
+<img src="screenshots/spotify-this-song-screenshot.png">
 
 <br>
 
-<img src="screenshots/spotify-this-song without song title.png">
+<img src="screenshots/spotify-this-song-without-song-title.png">
 
 <br>
 
@@ -84,11 +84,11 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 <br>
 
-<img src="screenshots/movie-this screenshot.png">
+<img src="screenshots/movie-this-screenshot.png">
 
 <br>
 
-<img src="screenshots/movie-this without movie title.png">
+<img src="screenshots/movie-this-without-movie-title.png">
 
 <br>
 
@@ -102,15 +102,15 @@ LIRI is like iPhone's SIRI. However, while SIRI is a Speech Interpretation and R
 
 <br>
 
-<img src="screenshots/do-what-it-says concert-this.png">
+<img src="screenshots/do-what-it-says-concert-this.png">
 
 <br>
 
-<img src="screenshots/do-what-it-says movie-this.png">
+<img src="screenshots/do-what-it-says-movie-this.png">
 
 <br>
 
-<img src="screenshots/do-what-it-says spotify-this-song.png">
+<img src="screenshots/do-what-it-says-spotify-this-song.png">
 
 <br>
 
