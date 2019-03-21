@@ -57,24 +57,24 @@ function concert_info() {
     // take artist_name array and make into a string with no spaces
     var queryUrl = "https://rest.bandsintown.com/artists/" + artist_name + "/events?app_id=codingbootcamp";
 
-    axios.get(queryUrl).then(
-        function(response) {
+    axios.get(queryUrl).then(function(response) {
+  
+          var concert_info;
           
           for (let i = 0; i < response.data.length; i++) {
             
-            concert_date = moment(response.data[i].datetime).format("MM-DD-YYYY");
-            var concert_info = ["\nVenue Name: " + response.data[i].venue.name,
+            concert_date = moment(response.data[i].datetime).format("MM/DD/YYYY");
+            concert_info = ["\nVenue Name: " + response.data[i].venue.name,
                               "Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country,
                               "Concert Date: " + concert_date + '\n'].join('\n');
             
-            fs.appendFile("log.txt", concert_info, function(err) {
+            console.log(concert_info);
+            fs.appendFileSync("log.txt", concert_info, function(err) {
               if (err) throw err;
-              console.log(concert_info);
             });
 
           }
-        }
-      );
+    });
 }
 
 // for getting song info using title for spotify-this-song command 
@@ -82,6 +82,8 @@ function song_info() {
 
     // take 4th argument (and thereafter) in command line from the argument array and save into a new array called song_title
     var song_title = arg_array.splice(3, (arg_array.length - 3));    
+
+    var song_info;
 
     //limiting query to 5 searches maximum
     if (song_title.length != 0) {
@@ -93,14 +95,14 @@ function song_info() {
 
             for (let j = 0; j < data.tracks.items.length; j++) {
 
-                var song_info = ["\nSong Title: " + data.tracks.items[j].name,
+                song_info = ["\nSong Title: " + data.tracks.items[j].name,
                                 "Album Title: " + data.tracks.items[j].album.name,
                                 "Artist(s) Name: " + data.tracks.items[j].artists[0].name,
                                 "Preview URL: " + data.tracks.items[j].preview_url + '\n'].join('\n');
 
+                console.log(song_info);
                 fs.appendFile("log.txt", song_info, function(err) {
                   if (err) throw err;
-                  console.log(song_info);
                 });
             }
         });
@@ -113,15 +115,15 @@ function song_info() {
 
             for (let j = 0; j < data.tracks.items.length; j++) {
                 if (data.tracks.items[j].artists[0].name === "Ace of Base") {
-                  var song_info = ["\nYou did not enter a song title. Here is a recommendation:",
+                  song_info = ["\nYou did not enter a song title. Here is a recommendation:",
                                   "\nSong Title: " + data.tracks.items[j].name,
                                   "Album Title: " + data.tracks.items[j].album.name,
                                   "Artist(s) Name: " + data.tracks.items[j].artists[0].name,
                                   "Preview URL: " + data.tracks.items[j].preview_url + '\n'].join('\n');
 
+                  console.log(song_info);
                   fs.appendFile("log.txt", song_info, function(err) {
                     if (err) throw err;
-                    console.log(song_info);
                   });
                 }
             }
@@ -134,6 +136,8 @@ function song_info() {
 function movie_info() {
 
     var movieName = "";
+
+    var movie_info;
 
     // Loop through all the words in the node argument
     // And do a little for-loop magic to handle the inclusion of "+"s
@@ -150,10 +154,9 @@ function movie_info() {
         
         var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
     
-        axios.get(queryUrl).then(
-        function(response) {
+        axios.get(queryUrl).then(function(response) {
 
-          var movie_info = ["\nTitle: " + response.data.Title,
+          movie_info = ["\nTitle: " + response.data.Title,
                             "Year Released: " + response.data.Year,
                             "Actors: " + response.data.Actors,
                             "Plot: " + response.data.Plot,
@@ -162,22 +165,20 @@ function movie_info() {
                             "IMDB Rating: " + response.data.Ratings[0].Value,
                             "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n'].join('\n');
 
+          console.log(movie_info);
           fs.appendFile("log.txt", movie_info, function(err) {
             if (err) throw err;
-            console.log(movie_info);
           });
 
-        }
-      );
+        });
     } else {   //if no movie title is entered, default to Mr. Nobody
         movieName = "Mr+Nobody";
 
         queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
 
-        axios.get(queryUrl).then(
-        function(response) {
+        axios.get(queryUrl).then(function(response) {
           
-          var movie_info = ["\nYou did not enter a movie title. Here is a recommendation:",
+          movie_info = ["\nYou did not enter a movie title. Here is a recommendation:",
                             "\nTitle: " + response.data.Title,
                             "Year Released: " + response.data.Year,
                             "Actors: " + response.data.Actors,
@@ -189,13 +190,12 @@ function movie_info() {
                             'If you have not watched "Mr. Nobody", then you should: http://www.imdb.com/title/' + response.data.imdbID + '/',
                             "It's on Netflix!\n"].join('\n');
 
-          fs.appendFile("log.txt", movie_info, function(err) {
-          if (err) throw err;
           console.log(movie_info);
+          fs.appendFile("log.txt", movie_info, function(err) {
+            if (err) throw err;
           });
 
-        }
-      );        
+        });        
     }    
 }
 
@@ -229,25 +229,24 @@ function random_info() {
           artist_name = artist_name.replace(/"/g,""); //take out the double quotes
           artist_name = artist_name.replace(/\s/g, '');  //take out spaces in between
           var concert_date;
+          var concert_info;
       
           var queryUrl = "https://rest.bandsintown.com/artists/" + artist_name + "/events?app_id=codingbootcamp";
           
-          axios.get(queryUrl).then(
-              function(response) {
+          axios.get(queryUrl).then(function(response) {
                 
                 for (let i = 0; i < response.data.length; i++) {
-                  concert_date = moment(response.data[i].datetime).format("MM-DD-YYYY");
-                  var concert_info = ["\nVenue Name: " + response.data[i].venue.name,
+                  concert_date = moment(response.data[i].datetime).format("MM/DD/YYYY");
+                  concert_info = ["\nVenue Name: " + response.data[i].venue.name,
                                     "Venue Location: " + response.data[i].venue.city + ", " + response.data[i].venue.country,
                                     "Concert Date: " + concert_date + '\n'].join('\n');
                   
+                  console.log(concert_info);
                   fs.appendFile("log.txt", concert_info, function(err) {
                     if (err) throw err;
-                    console.log(concert_info);
                   });
                 }
-              }
-            );
+          });
 
       break;
       
@@ -255,6 +254,7 @@ function random_info() {
           
           // second argument in text is song title in double quotes which is needed in spotify query
           var song_title = dataArr[1];
+          var song_info;
 
           spotify.search({ type: 'track', query: song_title, limit: 5 }, function(err, data) {
             if (err) {
@@ -262,14 +262,14 @@ function random_info() {
             return console.log('Error occurred: ' + err);
             }
               for (let j = 0; j < data.tracks.items.length; j++) {
-                var song_info = ["\nSong Title: " + data.tracks.items[j].name,
+                song_info = ["\nSong Title: " + data.tracks.items[j].name,
                                 "Album Title: " + data.tracks.items[j].album.name,
                                 "Artist(s) Name: " + data.tracks.items[j].artists[0].name,
                                 "Preview URL: " + data.tracks.items[j].preview_url + '\n'].join('\n');
 
+                console.log(song_info);
                 fs.appendFile("log.txt", song_info, function(err) {
                   if (err) throw err;
-                  console.log(song_info);
                 });
               }
             });
@@ -279,6 +279,7 @@ function random_info() {
       case "movie-this":
           
           var moviename = "";
+          var movie_info;
 
           // second argument in text is the movie title
           var movieName = dataArr[1].split(' ');
@@ -290,10 +291,9 @@ function random_info() {
               
               var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
           
-              axios.get(queryUrl).then(
-              function(response) {
+              axios.get(queryUrl).then(function(response) {
 
-                var movie_info = ["\nTitle: " + response.data.Title,
+                movie_info = ["\nTitle: " + response.data.Title,
                                   "Year Released: " + response.data.Year,
                                   "Actors: " + response.data.Actors,
                                   "Plot: " + response.data.Plot,
@@ -302,13 +302,12 @@ function random_info() {
                                   "IMDB Rating: " + response.data.Ratings[0].Value,
                                   "Rotten Tomatoes Rating: " + response.data.Ratings[1].Value + '\n'].join('\n');
 
+                console.log(movie_info);
                 fs.appendFile("log.txt", movie_info, function(err) {
                 if (err) throw err;
-                console.log(movie_info);
                 });
 
-              }
-            );
+              });
 
       break;
     }
